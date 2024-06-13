@@ -43,4 +43,15 @@ It is assumed that all the following steps are executed inside the root director
     # Access the web app in browser http://127.0.0.1:8000/
       
 ```
+#### Setup With setup.sh file
+```bash
 
+    # Make sure the setup.sh file is executable
+    sudo chmod +x setup.sh
+
+    # Execute file which installs requirements and setups up the virtual environment
+    ./setup.sh
+
+    # Access the web app in browser http://127.0.0.1:8000/
+
+```

@@ -43,6 +43,12 @@
 	  },
 	  "Dummy Value Smell": {
 		"mostly": 0.01
+	  },
+	  "Spacing Smell": {
+		"mostly": 0.9
+	  },
+	  "Spacing Inconsistency Smell": {
+		"mostly": 0.9
 	  }
 	},
 	"medium": {
@@ -89,6 +95,12 @@
 	  },
 	  "Dummy Value Smell": {
 		"mostly": 0.1
+	  },
+	  "Spacing Smell": {
+		"mostly": 0.95
+	  },
+	  "Spacing Inconsistency Smell": {
+		"mostly": 0.95
 	  }
 	},
 	"strict": {
@@ -135,6 +147,12 @@
 	  },
 	  "Dummy Value Smell": {
 		"mostly": 0.2
+	  },
+	  "Spacing Smell": {
+		"mostly": 1
+	  },
+	  "Spacing Inconsistency Smell": {
+		"mostly": 1
 	  }
 	}
   }

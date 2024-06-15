@@ -50,7 +50,7 @@
          
       },
       "Spacing Smell":{
-         
+         "mostly": {"min": 0.0, "max": 1.0}
       },
       "Special Character Smell":{
          
@@ -109,7 +109,7 @@
          
       },
       "Spacing Inconsistency Smell":{
-         
+         "mostly": {"min": 0.0, "max": 1.0}
       },
       "Special Character Inconsistency Smell":{
          

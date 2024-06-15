@@ -24,3 +24,7 @@ from .expect_column_values_to_not_contain_intermingled_data_type_smell import \
     ExpectColumnValuesToNotContainIntermingledDataTypes
 from .expect_column_values_to_not_contain_dummy_value_smell import \
     ExpectColumnValuesToNotContainDummyValueSmell
+from .expect_column_values_to_not_contain_spacing_smell import \
+    ExpectColumnValuesToNotContainSpacingSmell
+from .expect_column_values_to_not_contain_spacing_inconsistency_smell import \
+    ExpectColumnValuesToNotContainSpacingInconsistencySmell

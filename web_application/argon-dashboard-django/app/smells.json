@@ -13,7 +13,7 @@
          
       },
       "Suspect Date Value Smell":{
-         
+         "mostly": {"min": 0.0, "max": 1.0}
       },
       "Suspect Date/Time Interval Smell":{
          

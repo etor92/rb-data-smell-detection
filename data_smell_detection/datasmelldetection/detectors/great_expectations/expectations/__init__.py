@@ -16,5 +16,7 @@ from .expect_column_values_to_not_contain_casing_smell import \
     ExpectColumnValuesToNotContainCasingSmell
 from .expect_column_values_to_not_contain_duplicated_value_smell import \
     ExpectColumnValuesToNotContainDuplicatedValueSmell
-from .expect_column_avlues_to_not_contain_date_as_string_smell import \
+from .expect_column_values_to_not_contain_date_as_string_smell import \
     ExpectColumnValuesToNotContainDateAsStringSmell
+from .expect_column_values_to_not_contain_suspect_date_value_smell import \
+    ExpectColumnValuesToNotContainSuspectDateValueSmell

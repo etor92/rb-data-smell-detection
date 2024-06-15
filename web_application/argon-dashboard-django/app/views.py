@@ -12,6 +12,7 @@ from .forms import ParameterForm
 import os
 import sys
 import time
+from django.utils import timezone
 from app.models import File, Column, DetectedSmell, SmellType, Parameter
 from app import forms
 from core.settings import SMELL_FOLDER, BASE_DIR, CORE_DIR, LIBRARY_DIR
@@ -42,9 +43,10 @@ with open(SMELL_FOLDER+'doc.json') as json_file:
 
 all_smells = {i: {DataSmellType(a):b for a,b in j.items()} for i,j in data.items()}
 believability_smells = all_smells['Believability Smells']
-syntactic_understandability_smells = all_smells['Encoding Understandability Smells']
-encoding_understandability_smells = all_smells['Syntactic Understandability Smells']
+encoding_understandability_smells = all_smells['Encoding Understandability Smells']
+syntactic_understandability_smells = all_smells['Syntactic Understandability Smells']
 consistency_smells = all_smells['Consistency Smells']
+feature_smells = all_smells['Feature Smells (old catalogue)']
 
 
 def index(request):
@@ -77,7 +79,7 @@ def pages(request):
 
 def upload(request):
     dummy_user, c = User.objects.get_or_create(username="dummy_user")
-    global all_smells, believability_smells, syntactic_understandability_smells, encoding_understandability_smells, consistency_smells
+    global all_smells, believability_smells, syntactic_understandability_smells, encoding_understandability_smells, consistency_smells, feature_smells
 
     # Some presettings for data smell detection
     outer = os.path.join(os.getcwd(), "../")
@@ -99,7 +101,10 @@ def upload(request):
             context['size'] = fs.size(file_name) / 1000000
 
             # Save file to database
-            file1 = File(file_name=file_name, user=request.user) if request.user.is_authenticated else File(file_name=file_name, user=dummy_user)
+            if request.user.is_authenticated:
+                file1 = File(file_name=file_name, user=request.user, uploaded_time=timezone.now())
+            else:
+                file1 = File(file_name=file_name, user=dummy_user, uploaded_time=timezone.now())            
             file1.save()
             
             dataset = manager.get_dataset(file_name)
@@ -113,7 +118,7 @@ def upload(request):
                 smell.belonging_file.add(file1)
 
                 # Save parameters for smells
-                parameters = believability_smells.get(s) or syntactic_understandability_smells.get(s) or encoding_understandability_smells.get(s) or consistency_smells.get(s)
+                parameters = believability_smells.get(s) or syntactic_understandability_smells.get(s) or encoding_understandability_smells.get(s) or consistency_smells.get(s) or feature_smells.get(s)
                 if parameters is not None:
                     for p,v in parameters.items():
                         if v["max"] != "inf":
@@ -135,7 +140,7 @@ def upload(request):
 
 def customize(request):
     dummy_user, c = User.objects.get_or_create(username="dummy_user")
-    global all_smells, believability_smells, syntactic_understandability_smells, encoding_understandability_smells, consistency_smells
+    global all_smells, believability_smells, syntactic_understandability_smells, encoding_understandability_smells, consistency_smells, feature_smells
     context = {}
     
     current_user_id = request.user.id if request.user.is_authenticated else dummy_user.id
@@ -434,4 +439,6 @@ def precheck_columns(columns):
 # Get item of dictionary in template
 @register.filter
 def get_item(dictionary, key):
+    if dictionary is None:
+        return None
     return dictionary.get(key)

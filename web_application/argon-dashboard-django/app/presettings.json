@@ -31,6 +31,9 @@
 	  },
 	  "Integer As String Smell": {
 		"mostly": 0.01
+	  },
+	  "Date As String Smell": {
+		"mostly": 0.01
 	  }
 	},
 	"medium": {
@@ -65,6 +68,9 @@
 	  },
 	  "Integer As String Smell": {
 		"mostly": 0.1
+	  },
+	  "Date As String Smell": {
+		"mostly": 0.1
 	  }
 	},
 	"strict": {
@@ -98,6 +104,9 @@
 		"epsilon": 1e-6
 	  },
 	  "Integer As String Smell": {
+		"mostly": 0.2
+	  },
+	  "Date As String Smell": {
 		"mostly": 0.2
 	  }
 	}

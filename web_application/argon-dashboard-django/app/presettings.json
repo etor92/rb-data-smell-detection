@@ -37,6 +37,9 @@
 	  },
 	  "Suspect Date Value Smell": {
 		"mostly": 0.9
+	  },
+	  "Intermingled Data Type Smell": {
+		"mostly": 0.9
 	  }
 	},
 	"medium": {
@@ -77,6 +80,9 @@
 	  },
 	  "Suspect Date Value Smell": {
 		"mostly": 0.95
+	  },
+	  "Intermingled Data Type Smell": {
+		"mostly": 0.95
 	  }
 	},
 	"strict": {
@@ -116,6 +122,9 @@
 		"mostly": 0.2
 	  },
 	  "Suspect Date Value Smell": {
+		"mostly": 1
+	  },
+	  "Intermingled Data Type Smell": {
 		"mostly": 1
 	  }
 	}

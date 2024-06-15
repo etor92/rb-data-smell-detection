@@ -40,6 +40,9 @@
 	  },
 	  "Intermingled Data Type Smell": {
 		"mostly": 0.9
+	  },
+	  "Dummy Value Smell": {
+		"mostly": 0.01
 	  }
 	},
 	"medium": {
@@ -83,6 +86,9 @@
 	  },
 	  "Intermingled Data Type Smell": {
 		"mostly": 0.95
+	  },
+	  "Dummy Value Smell": {
+		"mostly": 0.1
 	  }
 	},
 	"strict": {
@@ -126,6 +132,9 @@
 	  },
 	  "Intermingled Data Type Smell": {
 		"mostly": 1
+	  },
+	  "Dummy Value Smell": {
+		"mostly": 0.2
 	  }
 	}
   }

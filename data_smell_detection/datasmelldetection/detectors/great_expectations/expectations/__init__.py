@@ -22,3 +22,5 @@ from .expect_column_values_to_not_contain_suspect_date_value_smell import \
     ExpectColumnValuesToNotContainSuspectDateValueSmell
 from .expect_column_values_to_not_contain_intermingled_data_type_smell import \
     ExpectColumnValuesToNotContainIntermingledDataTypes
+from .expect_column_values_to_not_contain_dummy_value_smell import \
+    ExpectColumnValuesToNotContainDummyValueSmell

@@ -30,3 +30,5 @@ from .expect_column_values_to_not_contain_spacing_inconsistency_smell import \
     ExpectColumnValuesToNotContainSpacingInconsistencySmell
 from .expect_column_values_to_not_contain_time_as_string_smell import \
     ExpectColumnValuesToNotContainTimeAsStringSmell
+from .expect_column_values_to_not_contain_precision_inconsistency_smell import \
+    ExpectColumnValuesToNotContainPrecisionInconsistencies

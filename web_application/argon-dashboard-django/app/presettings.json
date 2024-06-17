@@ -52,6 +52,9 @@
 	  },
 	  "Time As String Smell": {
 		"mostly": 0.9
+	  },
+	  "Precision Inconsistency Smell": {
+		"mostly": 0.1
 	  }
 	},
 	"medium": {
@@ -107,6 +110,9 @@
 	  },
 	  "Time As String Smell": {
 		"mostly": 0.95
+	  },
+	  "Precision Inconsistency Smell": {
+		"mostly": 0.9
 	  }
 	},
 	"strict": {
@@ -161,6 +167,9 @@
 		"mostly": 1
 	  },
 	  "Time As String Smell": {
+		"mostly": 1
+	  },
+	  "Precision Inconsistency Smell": {
 		"mostly": 1
 	  }
 	}

@@ -222,3 +222,8 @@ class DataSmellType(Enum):
     """
     This smell arises when ordering of words or special characters is not used consistently.
     """  # pylint: disable=W0105
+
+    PRECISION_INCONSISTENCY_SMELL = "Precision Inconsistency Smell"
+    """
+    This smell arises when floating-point values use different decimal place precisions.
+    """ # pylint: disable=W0105

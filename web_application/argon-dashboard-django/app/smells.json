@@ -122,6 +122,9 @@
       },
       "Transposition Inconsistency Smell":{
          
+      },
+      "Precision Inconsistency Smell":{
+         "mostly": {"min": 0.0, "max": 1.0}
       }
    },
    "Feature Smells (old catalogue)":{

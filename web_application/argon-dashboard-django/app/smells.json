@@ -83,7 +83,7 @@
          "mostly": {"min": 0.0, "max": 1.0}
       },
       "Time As String Smell":{
-         
+         "mostly": {"min": 0.0, "max": 1.0}
       },
       "Suspect Character Encoding Smell":{
          

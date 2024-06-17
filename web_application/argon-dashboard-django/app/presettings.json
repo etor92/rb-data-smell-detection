@@ -49,6 +49,9 @@
 	  },
 	  "Spacing Inconsistency Smell": {
 		"mostly": 0.9
+	  },
+	  "Time As String Smell": {
+		"mostly": 0.9
 	  }
 	},
 	"medium": {
@@ -101,6 +104,9 @@
 	  },
 	  "Spacing Inconsistency Smell": {
 		"mostly": 0.95
+	  },
+	  "Time As String Smell": {
+		"mostly": 0.95
 	  }
 	},
 	"strict": {
@@ -152,6 +158,9 @@
 		"mostly": 1
 	  },
 	  "Spacing Inconsistency Smell": {
+		"mostly": 1
+	  },
+	  "Time As String Smell": {
 		"mostly": 1
 	  }
 	}
